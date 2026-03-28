@@ -1,8 +1,8 @@
 import csv
 import sys
 
-OSU_FILE = './OSU_Files/DiscoPrince.osu'  
-OUTPUT_CSV = './CSV_Files/DiscoPrince.csv'   
+OSU_FILE = './OSU_Files/Pop Star.osu'  
+OUTPUT_CSV = './CSV_Files/Pop Star.csv'   
 
 notes = []
 parsing_objects = False
