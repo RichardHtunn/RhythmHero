@@ -6,9 +6,12 @@ import sys
 
 # --- CONFIGURATION ---
 CSV_FILE = './CSV_Files/CherryBlossoms.csv'      
-AUDIO_FILE = './Audios/CheeryBlossoms.mp3'       
+AUDIO_FILE = './Audios/CheeryBlossoms.wav'       
 SERIAL_PORT = '/dev/serial0'         
 BAUD_RATE = 9600
+
+# The Hardware Lookahead: 16 pixels/frame = 0.41 seconds to fall to the red line.
+FALL_TIME_SECONDS = 0.41
 
 # --- 1. INITIALIZE UART BRIDGE (LAPTOP SAFE) ---
 HARDWARE_CONNECTED = False
@@ -26,9 +29,19 @@ try:
     with open(CSV_FILE, mode='r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
+            
+            # --- FIX 1: Convert CSV number to FPGA Binary Bitmask ---
+            lane_num = int(row['lane'])
+            bitmask = 0x00
+            if lane_num == 0: bitmask = 0x01 # 0000 0001
+            elif lane_num == 1: bitmask = 0x02 # 0000 0010
+            elif lane_num == 2: bitmask = 0x04 # 0000 0100
+            elif lane_num == 3: bitmask = 0x08 # 0000 1000
+            
             notes_queue.append({
                 'time': float(row['timestamp']),
-                'lane': str(row['lane']).encode() 
+                'lane_mask': bytes([bitmask]), # The actual binary byte for the FPGA
+                'lane_str': str(lane_num)      # Keep the string just for the terminal print
             })
     print(f"Loaded {len(notes_queue)} notes from {CSV_FILE}.")
 except FileNotFoundError:
@@ -60,17 +73,19 @@ try:
         if len(notes_queue) > 0:
             next_note = notes_queue[0] 
             
-            if current_time >= next_note['time']:
-                # Only fire the physical wire if we are actually on the Pi
-                if HARDWARE_CONNECTED:
-                    bridge.write(next_note['lane']) 
+            # --- FIX 2: The Hardware Lookahead ---
+            # Fire the note EARLY so it has time to fall down the TV screen!
+            if current_time >= (next_note['time'] - FALL_TIME_SECONDS):
                 
-                print(f"[{current_time:.3f}s] -> Fired Lane {next_note['lane'].decode()}")
+                if HARDWARE_CONNECTED:
+                    bridge.write(next_note['lane_mask']) 
+                
+                print(f"[{current_time:.3f}s] -> Fired Lane {next_note['lane_str']} (Hits at {next_note['time']:.3f}s)")
                 notes_queue.pop(0) 
 
-        # Only listen for the FPGA 'X' if we are actually on the Pi
+        # Listen for the FPGA 'X' (Fatal Miss)
         if HARDWARE_CONNECTED and bridge.in_waiting > 0:
-            fpga_msg = bridge.read().decode('utf-8')
+            fpga_msg = bridge.read().decode('utf-8', errors='ignore')
             if fpga_msg == 'X':
                 print("\n[!!!] FATAL MISS RECEIVED FROM FPGA [!!!]")
                 print("Game Over. Stopping music.")
