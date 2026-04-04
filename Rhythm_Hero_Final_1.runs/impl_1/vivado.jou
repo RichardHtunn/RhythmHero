@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr  1 06:56:05 2026
+# Process ID: 38352
+# Current directory: /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/impl_1
+# Command line: vivado -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/impl_1/top.vdi
+# Journal file: /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/impl_1/vivado.jou
+# Running On: sam-VivoBook-ASUSLaptop-X513UA-M513UA, OS: Linux, CPU Frequency: 1113.637 MHz, CPU Physical cores: 12, Host memory: 7670 MB
+#-----------------------------------------------------------
+source top.tcl -notrace

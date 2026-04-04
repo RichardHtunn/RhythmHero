@@ -1,0 +1,117 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Wed Apr  1 06:56:45 2026
+| Host         : sam-VivoBook-ASUSLaptop-X513UA-M513UA running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    39 |
+|    Minimum number of control sets                        |    39 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   189 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    39 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |    18 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     3 |
+| >= 16              |    11 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              76 |           31 |
+| No           | No                    | Yes                    |              36 |           30 |
+| No           | Yes                   | No                     |              25 |            8 |
+| Yes          | No                    | No                     |              78 |           27 |
+| Yes          | No                    | Yes                    |             174 |           80 |
+| Yes          | Yes                   | No                     |             134 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+--------------------------------------+---------------------------------------+------------------+----------------+--------------+
+|             Clock Signal            |             Enable Signal            |            Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------+--------------------------------------+---------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                      | UART_RX_INST/p_0_in[1]               |                                       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                      | UART_RX_INST/p_0_in[0]               |                                       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                      | UART_RX_INST/p_0_in[3]               |                                       |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                      | UART_RX_INST/p_0_in[2]               |                                       |                1 |              1 |         1.00 |
+|  FSM_INST/game_state_reg[1]_i_1_n_0 |                                      |                                       |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                      | UART_RX_INST/data_out[3]_i_1_n_0     |                                       |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                      |                                      | UART_RX_INST/new_byte_reg_0           |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                      | LANES_INST/L2/y_arr[1][9]_i_1__1_n_0 | FSM_INST/AR[0]                        |                6 |             10 |         1.67 |
+|  clk_25                             |                                      |                                       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                      | LANES_INST/L1/y_arr[1][9]_i_1__0_n_0 | FSM_INST/AR[0]                        |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                      | LANES_INST/L1/y_arr[0][9]_i_1__0_n_0 | FSM_INST/AR[0]                        |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG                      | LANES_INST/L1/y_arr[2][9]_i_1__0_n_0 | FSM_INST/AR[0]                        |                6 |             10 |         1.67 |
+|  clk_IBUF_BUFG                      | LANES_INST/L3/y_arr[0][9]_i_1__2_n_0 | FSM_INST/AR[0]                        |                7 |             10 |         1.43 |
+|  clk_IBUF_BUFG                      | LANES_INST/L3/y_arr[2][9]_i_1__2_n_0 | FSM_INST/AR[0]                        |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG                      | LANES_INST/L2/y_arr[3][9]_i_1__1_n_0 | FSM_INST/AR[0]                        |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                      | LANES_INST/L2/y_arr[2][9]_i_1__1_n_0 | FSM_INST/AR[0]                        |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG                      | LANES_INST/L2/y_arr[0][9]_i_1__1_n_0 | FSM_INST/AR[0]                        |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG                      | LANES_INST/L0/y_arr[3][9]_i_1_n_0    | FSM_INST/AR[0]                        |                3 |             10 |         3.33 |
+|  clk_25                             | VGA_SYNC_INST/v_count_next           |                                       |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                      | LANES_INST/L3/y_arr[1][9]_i_1__2_n_0 | FSM_INST/AR[0]                        |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                      | LANES_INST/L3/y_arr[3][9]_i_1__2_n_0 | FSM_INST/AR[0]                        |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG                      | LANES_INST/L1/y_arr[3][9]_i_1__0_n_0 | FSM_INST/AR[0]                        |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                      | LANES_INST/L0/y_arr[2][9]_i_1_n_0    | FSM_INST/AR[0]                        |                5 |             10 |         2.00 |
+|  clk_IBUF_BUFG                      | LANES_INST/L0/y_arr[1][9]_i_1_n_0    | FSM_INST/AR[0]                        |                4 |             10 |         2.50 |
+|  clk_IBUF_BUFG                      | LANES_INST/L0/y_arr[0][9]_i_1_n_0    | FSM_INST/AR[0]                        |                7 |             10 |         1.43 |
+|  clk_IBUF_BUFG                      | UART_TX_INST/clk_count               | UART_TX_INST/clk_count[13]_i_1__0_n_0 |                5 |             14 |         2.80 |
+|  clk_IBUF_BUFG                      | UART_RX_INST/clk_count               |                                       |                6 |             14 |         2.33 |
+|  clk_IBUF_BUFG                      | JUDGES_INST/J3/score_good_reg_0      | FSM_INST/AR[0]                        |                4 |             14 |         3.50 |
+|  clk_IBUF_BUFG                      | DEB_0/sel                            | DEB_0/counter_set                     |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                      | DEB_1/counter_out[0]_i_2__0_n_0      | DEB_1/counter_set                     |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                      | DEB_M/counter_out[0]_i_2__4_n_0      | DEB_M/counter_set                     |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                      | DEB_2/counter_out[0]_i_2__1_n_0      | DEB_2/counter_set                     |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                      | DEB_ST/counter_out[0]_i_2__3_n_0     | DEB_ST/counter_set                    |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                      | DEB_3/counter_out[0]_i_2__2_n_0      | DEB_3/counter_set                     |                5 |             20 |         4.00 |
+|  clk_IBUF_BUFG                      |                                      | frame_counter[20]_i_1_n_0             |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG                      | LED_FB_INST/perf_counter[0]_i_1_n_0  |                                       |                6 |             23 |         3.83 |
+|  clk_IBUF_BUFG                      | LED_FB_INST/good_counter[0]_i_1_n_0  |                                       |                6 |             23 |         3.83 |
+|  clk_IBUF_BUFG                      |                                      | FSM_INST/AR[0]                        |               30 |             36 |         1.20 |
+|  clk_IBUF_BUFG                      |                                      |                                       |               27 |             64 |         2.37 |
++-------------------------------------+--------------------------------------+---------------------------------------+------------------+----------------+--------------+
+
+

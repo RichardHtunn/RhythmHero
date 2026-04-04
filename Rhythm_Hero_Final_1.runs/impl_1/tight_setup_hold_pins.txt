@@ -1,0 +1,17 @@
++====================+===================+====================================+
+| Launch Setup Clock | Launch Hold Clock | Pin                                |
++====================+===================+====================================+
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L1/active_arr_reg[2]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L2/active_arr_reg[0]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L1/active_arr_reg[0]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L0/active_arr_reg[1]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L3/active_arr_reg[0]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L0/active_arr_reg[0]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L2/active_arr_reg[2]/D  |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L0/active_arr_reg[2]/D  |
+| sys_clk_pin        | sys_clk_pin       | JUDGES_INST/J1/score_perfect_reg/D |
+| sys_clk_pin        | sys_clk_pin       | JUDGES_INST/J1/fatal_miss_reg/D    |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L3/active_arr_reg[2]/D  |
+| sys_clk_pin        | sys_clk_pin       | JUDGES_INST/J2/score_perfect_reg/D |
+| sys_clk_pin        | sys_clk_pin       | LANES_INST/L3/active_arr_reg[1]/D  |
++--------------------+-------------------+------------------------------------+

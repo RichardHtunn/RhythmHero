@@ -1,0 +1,367 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Apr  1 06:55:06 2026
+# Process ID: 38069
+# Current directory: /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/synth_1
+# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/synth_1/top.vds
+# Journal file: /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/synth_1/vivado.jou
+# Running On: sam-VivoBook-ASUSLaptop-X513UA-M513UA, OS: Linux, CPU Frequency: 1985.311 MHz, CPU Physical cores: 12, Host memory: 7670 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1322.605 ; gain = 0.027 ; free physical = 900 ; free virtual = 5576
+Command: read_checkpoint -auto_incremental -incremental /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 38099
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2006.539 ; gain = 403.801 ; free physical = 125 ; free virtual = 4652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/top.vhd:25]
+INFO: [Synth 8-638] synthesizing module 'debouncer' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/debouncer.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'debouncer' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/debouncer.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'single_pulser' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/single_pulser.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'single_pulser' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/single_pulser.vhd:12]
+INFO: [Synth 8-638] synthesizing module 'uart_rx' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/uart_rx.vhd:36]
+INFO: [Synth 8-226] default block is never used [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/uart_rx.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'uart_rx' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/uart_rx.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'uart_tx' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/uart_tx.vhd:16]
+INFO: [Synth 8-226] default block is never used [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/uart_tx.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'uart_tx' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/uart_tx.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'game_fsm' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/game_fsm.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'game_fsm' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/game_fsm.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'four_lane_manager' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/four_lane_manager.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'lane_shift_register' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/lane_shift_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'lane_shift_register' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/lane_shift_register.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'four_lane_manager' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/four_lane_manager.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'four_judge_manager' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/four_judge_manager.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'hit_judge' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/hit_judge.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'hit_judge' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/hit_judge.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'four_judge_manager' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/four_judge_manager.vhd:19]
+INFO: [Synth 8-638] synthesizing module 'score_tracker' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/score_tracker.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'score_tracker' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/score_tracker.vhd:17]
+INFO: [Synth 8-638] synthesizing module 'vga_sync' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/vga_sync.vhd:38]
+INFO: [Synth 8-256] done synthesizing module 'vga_sync' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/vga_sync.vhd:38]
+INFO: [Synth 8-638] synthesizing module 'vga_render' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/vga_render.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'vga_render' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/vga_render.vhd:21]
+INFO: [Synth 8-638] synthesizing module 'seven_segment_display' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/seven_segment_display.vhd:16]
+INFO: [Synth 8-3491] module 'bin_to_bcd' declared at '/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/bin_to_bcd.vhd:26' bound to instance 'BCD_INST' of component 'bin_to_bcd' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/seven_segment_display.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'bin_to_bcd' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/bin_to_bcd.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'bin_to_bcd' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/bin_to_bcd.vhd:36]
+INFO: [Synth 8-226] default block is never used [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/seven_segment_display.vhd:62]
+INFO: [Synth 8-256] done synthesizing module 'seven_segment_display' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/seven_segment_display.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'led_hit_feedback' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/lane_hit_feedback.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'led_hit_feedback' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/lane_hit_feedback.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/top.vhd:25]
+WARNING: [Synth 8-7129] Port score[15] in module seven_segment_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score[14] in module seven_segment_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[13] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[12] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[9] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[8] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[7] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[6] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[4] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2091.508 ; gain = 488.770 ; free physical = 127 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2106.352 ; gain = 503.613 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2106.352 ; gain = 503.613 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2106.352 ; gain = 0.000 ; free physical = 126 ; free virtual = 4556
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/constrs_1/new/Basys3_Master.xdc]
+Finished Parsing XDC File [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/constrs_1/new/Basys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/constrs_1/new/Basys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2261.102 ; gain = 0.000 ; free physical = 118 ; free virtual = 4550
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2261.137 ; gain = 0.000 ; free physical = 118 ; free virtual = 4551
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 123 ; free virtual = 4556
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 123 ; free virtual = 4556
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 123 ; free virtual = 4556
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 121 ; free virtual = 4555
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 121 ; free virtual = 4555
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'game_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+               start_bit |                               01 |                               01
+               data_bits |                               10 |                               10
+                stop_bit |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+               start_bit |                               01 |                               01
+               data_bits |                               10 |                               10
+                stop_bit |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_tx'
+WARNING: [Synth 8-327] inferring latch for variable 'game_state_reg' [/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.srcs/sources_1/new/game_fsm.vhd:34]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+                    play |                              010 |                               01
+               game_over |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'game_fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 123 ; free virtual = 4556
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : synth_design options have changed between reference and incremental
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   21 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 16    
+	   2 Input   10 Bit       Adders := 18    
+	   2 Input    4 Bit       Adders := 34    
+	   2 Input    3 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
++---Registers : 
+	               21 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               10 Bit    Registers := 18    
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 39    
++---Muxes : 
+	   2 Input   14 Bit        Muxes := 2     
+	   4 Input   14 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 52    
+	   2 Input    8 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 104   
+	   4 Input    4 Bit        Muxes := 3     
+	   5 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 160   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port score[15] in module seven_segment_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port score[14] in module seven_segment_display is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[13] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[12] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[9] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[8] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[7] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[6] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[5] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port led[4] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 127 ; free virtual = 4553
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 122 ; free virtual = 4552
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   176|
+|3     |LUT1   |    19|
+|4     |LUT2   |    75|
+|5     |LUT3   |    45|
+|6     |LUT4   |   502|
+|7     |LUT5   |   372|
+|8     |LUT6   |   617|
+|9     |FDCE   |   210|
+|10    |FDRE   |   311|
+|11    |LD     |     2|
+|12    |IBUF   |     8|
+|13    |OBUF   |    32|
+|14    |OBUFT  |    10|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2261.137 ; gain = 503.613 ; free physical = 126 ; free virtual = 4557
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2261.137 ; gain = 658.398 ; free physical = 126 ; free virtual = 4557
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2261.137 ; gain = 0.000 ; free physical = 410 ; free virtual = 4841
+INFO: [Netlist 29-17] Analyzing 178 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2261.137 ; gain = 0.000 ; free physical = 408 ; free virtual = 4839
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  LD => LDCE: 2 instances
+
+Synth Design complete | Checksum: c1a0568d
+INFO: [Common 17-83] Releasing license: Synthesis
+61 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:38 . Memory (MB): peak = 2261.137 ; gain = 938.531 ; free physical = 408 ; free virtual = 4839
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1810.396; main = 1483.112; forked = 379.556
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3219.590; main = 2261.105; forked = 990.500
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2285.113 ; gain = 0.000 ; free physical = 408 ; free virtual = 4839
+INFO: [Common 17-1381] The checkpoint '/home/sam/Downloads/Rhythm_Hero_Final_1-20260331T220837Z-3-001/Rhythm_Hero_Final_1/Rhythm_Hero_Final_1.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  1 06:55:54 2026...
