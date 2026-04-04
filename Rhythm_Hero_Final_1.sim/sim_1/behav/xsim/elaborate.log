@@ -1,0 +1,32 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2023.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_top_behav xil_defaultlib.tb_top -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.debouncer [debouncer_default]
+Compiling architecture behavioral of entity xil_defaultlib.single_pulser [single_pulser_default]
+Compiling architecture behavioral of entity xil_defaultlib.uart_rx [uart_rx_default]
+Compiling architecture behavioral of entity xil_defaultlib.uart_tx [uart_tx_default]
+Compiling architecture behavioral of entity xil_defaultlib.game_fsm [game_fsm_default]
+Compiling architecture behavioral of entity xil_defaultlib.lane_shift_register [lane_shift_register_default]
+Compiling architecture structural of entity xil_defaultlib.four_lane_manager [four_lane_manager_default]
+Compiling architecture behavioral of entity xil_defaultlib.hit_judge [hit_judge_default]
+Compiling architecture structural of entity xil_defaultlib.four_judge_manager [four_judge_manager_default]
+Compiling architecture behavioral of entity xil_defaultlib.score_tracker [score_tracker_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_sync [vga_sync_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_render [vga_render_default]
+Compiling architecture behavioral of entity xil_defaultlib.bin_to_bcd [bin_to_bcd_default]
+Compiling architecture behavioral of entity xil_defaultlib.seven_segment_display [seven_segment_display_default]
+Compiling architecture behavioral of entity xil_defaultlib.led_hit_feedback [led_hit_feedback_default]
+Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_top
+Built simulation snapshot tb_top_behav
