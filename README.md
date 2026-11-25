@@ -4,6 +4,9 @@
 
 This repository contains the VHDL source code, pin constraints, and hardware documentation for an arcade-style rhythm game. Built around the Basys3 FPGA board, this project demonstrates advanced hardware-software synchronization, custom VGA driver implementation, and physical input debouncing.
 
+## Demo
+Check out the [video walkthrough on YouTube](https://youtu.be/MybhV8WV_8I?si=3v60Go2-ZVLevenU).
+
 ## 🕹️ Project Showcase
 <img width="1280" height="720" alt="RhythmOne" src="https://github.com/user-attachments/assets/2ed33a01-c1f2-4f35-91b4-f0aeddd906b8" />
 <img width="1280" height="720" alt="RhythmTwo" src="https://github.com/user-attachments/assets/03c857f7-ed55-487a-929c-c0a7f462e09a" />
